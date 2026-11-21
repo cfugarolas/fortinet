@@ -9,7 +9,6 @@ get system interface
 ```
 
 ![Adaptadors de xarxa del Fortinet](img/captura0.jpg)
-
 *Exemple: adaptadors de xarxa configurats al Fortinet.*
 
 ### Activar http per poder utilizar els Fortinets de Laboratori
@@ -21,7 +20,6 @@ config system interface
 ```
 
 ![Configuració de xarxa del port1](img/captura1.jpg)
-
 *Exemple: configuració inicial del port1 del adaptador de xarxa configurats al Fortinet.*
 
 ### Activar l'accès http al nostre fortinet de laboratori
@@ -35,5 +33,4 @@ end
 ```
 
 ![Afegir l'accès http](img/captura2.jpg)
-
 *Exemple: Afegit l'accès, veure que apareix i guardar els canvis amb la comanda end.*
