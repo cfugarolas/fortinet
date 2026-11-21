@@ -43,6 +43,7 @@ end
 ```bash
 http://192.168.1.139
 ```
-![Afegir l'accès http](img/captura3.jpg)
+
+<img src="img/captura3.jpg" alt="Accés al Fortinet des del navegador" width="600">
 
 *Exemple: Accès des de el navegador al nostre fortinet per http*
