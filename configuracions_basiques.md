@@ -24,7 +24,7 @@ config system interface
 
 ### Activar l'accès http al nostre fortinet de laboratori
 
-Afegim l'accés del http
+Afegim l'accés del http, mostrem la configuració i guardem els canvis.
 
 ```bash
 append allowaccess http
