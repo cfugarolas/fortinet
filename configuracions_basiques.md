@@ -6,6 +6,8 @@ Executem la següent comanda per veure la configuració actual dels adaptadors d
 
 ```bash
 get system interface
+edit port1
+show
 ```
 
 ![Adaptadors de xarxa del Fortinet](img/captura0.jpg)
