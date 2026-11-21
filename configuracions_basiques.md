@@ -37,3 +37,12 @@ end
 ![Afegir l'accès http](img/captura2.jpg)
 
 *Exemple: Afegit l'accès, veure que apareix i guardar els canvis amb la comanda end.*
+
+### Ara mirem s'accedir des de un navegador a l'ip del port1 per http
+
+```bash
+http://192.168.1.139
+```
+![Afegir l'accès http](img/captura3.jpg)
+
+*Exemple: Accès des de el navegador al nostre fortinet per http*
