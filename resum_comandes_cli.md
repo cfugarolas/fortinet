@@ -2,7 +2,7 @@
 
 Aquest document recull les comandes CLI dels documents del repositori. S'hi aniran afegint els resums dels altres documents.
 
-## [Primer accés al firewall](primer_acces_al_firewall.md)
+## [Primer accés al firewall](1_primer_acces_al_firewall.md)
 
 Consultar les interfícies de xarxa:
 
@@ -38,7 +38,7 @@ show
 end
 ```
 
-## [Ajustar les configuracions inicials](ajustar_configuracions_inicials.md)
+## [Ajustar les configuracions inicials](2_ajustar_configuracions_inicials.md)
 
 Comprovar la connectivitat a Internet des del Fortinet:
 
@@ -57,4 +57,12 @@ set mode static
 set ip 192.168.1.140/24
 show
 end
+```
+
+## [Verificar la llicència d'avaluació](4_verificacio_llicencia_eva.md)
+
+Consultar l'estat i la informació general del Fortinet, inclosa la informació de la llicència:
+
+```bash
+get system status
 ```

@@ -9,6 +9,7 @@ Repositori amb instruccions i exemples per configurar un firewall Fortinet en un
 | [1. Primer accés al firewall](1_primer_acces_al_firewall.md) | Consulta de les interfícies, activació o desactivació de l'accés HTTP a `port1` i configuració inicial des del navegador. |
 | [2. Ajustar les configuracions inicials](2_ajustar_configuracions_inicials.md) | Comprovació de la connectivitat, configuració inicial del port d'administració i ajustos bàsics del sistema. |
 | [3. Configurar una IP estàtica al firewall](3_configurar_ip_estatica_firewall.md) | Canvi de `port1` de DHCP a una adreça IP estàtica, tant des de la interfície web com des de la CLI. |
+| [4. Verificar la llicència d'avaluació](4_verificacio_llicencia_eva.md) | Consulta de l'estat de la llicència d'avaluació del Fortinet. |
 | [Resum de comandes CLI](resum_comandes_cli.md) | Recull de les comandes utilitzades als documents de configuració. |
 
 ## Recomanacions
