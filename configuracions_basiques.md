@@ -1,8 +1,10 @@
-## Primeres configuracions i activació de l'accés HTTP en un Fortinet de laboratori
+# Configuració inicial d'un Fortinet de laboratori
 
-### Consultar els adaptadors de xarxa del Fortinet
+Aquesta guia mostra com consultar les interfícies de xarxa, habilitar l'accés HTTP a `port1` i completar la configuració inicial des del navegador.
 
-Executem la comanda següent per consultar la configuració actual dels adaptadors de xarxa del nostre Fortinet.
+## 1. Consultar les interfícies de xarxa
+
+Executa aquesta comanda per veure les interfícies de xarxa configurades:
 
 ```bash
 get system interface
@@ -12,101 +14,37 @@ get system interface
 
 *Exemple dels adaptadors de xarxa configurats al Fortinet.*
 
-### Activar HTTP als Fortinets de laboratori
+---
 
-Consultem la configuració actual de `port1`.
+## 2. Habilitar l'accés HTTP a `port1`
+
+Entra a la configuració de les interfícies i consulta la configuració actual de `port1`:
 
 ```bash
 config system interface
 edit port1
 show
+```
+
+Un cop situat dins la configuració de `port1`, afegeix HTTP als mètodes d'accés permesos i desa els canvis:
+
+```bash
+append allowaccess http
+show
+end
 ```
 
 ![Configuració de xarxa del port1](img/captura1.jpg)
 
-*Exemple de la configuració inicial de `port1` a l'adaptador de xarxa del Fortinet.*
-
-### Activar l'accés HTTP al Fortinet de laboratori
-
-Afegim l'accés HTTP, mostrem la configuració i desem els canvis.
-
-```bash
-append allowaccess http
-show
-end
-```
+*Configuració inicial de `port1`.*
 
 ![Accés HTTP afegit](img/captura2.jpg)
 
-*Exemple de l'accés afegit. Comprovem que apareix i desem els canvis amb la comanda `end`.*
+*L'accés HTTP apareix a la configuració. La comanda `end` desa els canvis i surt del menú.*
 
-### Accedir al Fortinet des d'un navegador mitjançant HTTP
+### Treure l'accés HTTP
 
-```bash
-http://192.168.1.139
-```
-
-<img src="img/captura3.jpg" alt="Accés al Fortinet des del navegador" width="600">
-
-Introduïm les credencials d'accés:
-
-```bash
-admin
-admin
-```
-
-*Exemple d'accés al Fortinet mitjançant el navegador i el protocol HTTP.*
-
-## Primeres configuracions des de l'entorn web
-
-![Primera configuració](img/captura4.jpg)
-
-*Fem clic a «Begin».*
-
-## Configurar el nom d'amfitrió del Fortinet
-
-![Configuració del nom d'amfitrió](img/captura5.jpg)
-
-*Escollim el nom i fem clic a «OK».*
-
-## Triar l'estil del tauler (Dashboard)
-
-![Selecció de l'estil del tauler](img/captura6.jpg)
-
-*Escollim «Optimal», el nou estil disponible a partir de la versió 6.4.*
-
-## Vídeo introductori de la versió 7
-
-![Vídeo introductori de la versió 7](img/captura7.jpg)
-
-*Seleccionem «Don't show again» i fem clic a «OK».*
-
-## Accedir a la interfície web del Fortinet
-
-![Interfície web del Fortinet](img/captura8.jpg)
-
-*Exemple d'accés a la interfície web.*
-
-## Resum de les comandes treballades
-
-Consultar les interfícies de xarxa:
-
-```bash
-get system interface
-```
-
-Consultar la configuració de `port1` i habilitar-hi l'accés HTTP:
-
-```bash
-config system interface
-edit port1
-show
-append allowaccess http
-show
-end
-```
-
-Treure l'accés HTTP de `port1`:
+Per desactivar l'accés HTTP de `port1`, executa:
 
 ```bash
 config system interface
@@ -116,8 +54,91 @@ show
 end
 ```
 
-Accedir a la interfície web del Fortinet (substitueix l'adreça per l'adreça IP de `port1`):
+---
+
+## 3. Accedir a la interfície web
+
+Obre l'adreça IP de `port1` en un navegador. Canvia l'adreça de l'exemple si el teu Fortinet en té una de diferent:
 
 ```text
 http://192.168.1.139
+```
+
+![Accés al Fortinet des del navegador](img/captura3.jpg)
+
+*Pàgina d'accés al Fortinet des del navegador.*
+
+Introdueix les credencials de l'exemple:
+
+```text
+admin
+admin
+```
+
+## 4. Completar la configuració inicial
+
+Segueix els passos que es mostren a la interfície web:
+
+1. A la pantalla inicial, fes clic a «Begin».
+
+   ![Primera configuració](img/captura4.jpg)
+
+2. Tria el nom d'amfitrió del Fortinet i fes clic a «OK».
+
+   ![Configuració del nom d'amfitrió](img/captura5.jpg)
+
+3. Selecciona l'estil «Optimal» per al tauler. Aquest estil està disponible a partir de la versió 6.4.
+
+   ![Selecció de l'estil del tauler](img/captura6.jpg)
+
+4. Si no vols tornar a veure el vídeo introductori, selecciona «Don't show again» i fes clic a «OK».
+
+   ![Vídeo introductori de la versió 7](img/captura7.jpg)
+
+Quan acabis, veuràs la interfície web del Fortinet:
+
+![Interfície web del Fortinet](img/captura8.jpg)
+
+---
+
+## Resum de les comandes
+
+Consultar les interfícies:
+
+```bash
+get system interface
+```
+
+Consultar la configuració de `port1`:
+
+```bash
+config system interface
+edit port1
+show
+```
+
+Habilitar HTTP a `port1`:
+
+```bash
+config system interface
+edit port1
+append allowaccess http
+show
+end
+```
+
+Accedir a la interfície web (canvia la IP per la de `port1`):
+
+```text
+http://192.168.1.139
+```
+
+Treure HTTP de `port1`:
+
+```bash
+config system interface
+edit port1
+unselect allowaccess http
+show
+end
 ```
