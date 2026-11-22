@@ -44,7 +44,7 @@ Accedim al menú `System` i després a l'apartat `Settings`i configurem la nostr
 
 ![Adaptadors de xarxa del Fortinet](img/captura13.jpg)
 
-Configurem el Idle timeout a 480 al tractar-se d'un laboratori.
+Configurem el "Idle timeout" a 480 al tractar-se d'un laboratori.
 
 ![Adaptadors de xarxa del Fortinet](img/captura14.jpg)
 
