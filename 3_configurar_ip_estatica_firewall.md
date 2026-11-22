@@ -18,4 +18,33 @@ En seleccionar `Manual`, el FortiGate proposa com a adreça IP estàtica la mate
 
 ![Adaptadors de xarxa del Fortinet](img/captura17.jpg)
 
-## 2. Ara ho farem per línia de comandes
+## 2. Ara ho farem per línia d'ordres
+
+Accedim a la configuració de les interfícies de xarxa i veiem la configuració actual:
+
+```bash
+config system interface
+edit port1
+show
+```
+
+![Adaptadors de xarxa del Fortinet](img/captura18.jpg)
+
+Configurem el mode d'adreçament com a estàtic:
+
+```bash
+set mode static
+```
+
+![Adaptadors de xarxa del Fortinet](img/captura19.jpg)
+
+Per assignar una adreça IP específica a `port1`, executa la comanda següent:
+
+```bash
+set ip 192.168.1.140/24
+show
+```
+
+![Adaptadors de xarxa del Fortinet](img/captura20.jpg)
+
+*En aquest cas he assignat la mateixa IP que la proposada i fem `end`per guardar la configuració.*

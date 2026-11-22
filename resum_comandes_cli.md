@@ -45,3 +45,16 @@ Comprovar la connectivitat a Internet des del Fortinet:
 ```bash
 exec ping 8.8.8.8
 ```
+
+## [Configurar una IP estàtica al firewall](3_configurar_ip_estatica_firewall.md)
+
+Canviar el mode d'adreçament de `port1` a estàtic i assignar-hi una adreça IP. Substitueix l'adreça i el prefix d'exemple pels valors adequats a la teva xarxa:
+
+```bash
+config system interface
+edit port1
+set mode static
+set ip 192.168.1.140/24
+show
+end
+```
