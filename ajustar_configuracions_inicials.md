@@ -53,3 +53,13 @@ Activarem el "Auto file system check" perquè revisi automàticament el sistema 
 ![Adaptadors de xarxa del Fortinet](img/captura15.jpg)
 
 *Clic a `Apply` per guardar els canvis.*
+
+---
+
+## Resum de les comandes
+
+Comprovar la connectivitat a Internet des del Fortinet (abans i després de modificar la configuració del `port1`):
+
+```bash
+exec ping 8.8.8.8
+```
