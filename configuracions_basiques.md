@@ -109,7 +109,7 @@ Consultar les interfícies:
 get system interface
 ```
 
-Consultar la configuració de `port1`:
+Consultar la configuració del `port1`:
 
 ```bash
 config system interface
@@ -117,7 +117,7 @@ edit port1
 show
 ```
 
-Habilitar HTTP a `port1`:
+Habilitar HTTP al `port1`:
 
 ```bash
 config system interface
@@ -127,13 +127,13 @@ show
 end
 ```
 
-Accedir a la interfície web (canvia la IP per la de `port1`):
+Accedir a la interfície web (canvia la IP per la del `port1`):
 
 ```text
 http://192.168.1.139
 ```
 
-Treure HTTP de `port1`:
+Treure l'accès HTTP de `port1`:
 
 ```bash
 config system interface
