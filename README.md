@@ -1,2 +1,2 @@
-# fortinet
+# Fortinet
 Repositori dedicat a la configuració dels firewalls Fortinets
