@@ -1,4 +1,4 @@
-# Configuració inicial d'un Fortinet de laboratori
+# Primer accès al nostre Firewall
 
 Aquesta guia mostra com consultar les interfícies de xarxa, habilitar l'accés HTTP a `port1` i completar la configuració inicial des del navegador.
 
