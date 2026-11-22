@@ -1,8 +1,8 @@
-## Primeres configuracions i habilitar l'accès HTTP en un fortinet de laboratori
+## Primeres configuracions i activació de l'accés HTTP en un Fortinet de laboratori
 
-### Veure els adapators de xarxa del fortinet
+### Consultar els adaptadors de xarxa del Fortinet
 
-Executem la següent comanda per veure la configuració actual dels adaptadors de xarxa del nostre fortinet.
+Executem la comanda següent per consultar la configuració actual dels adaptadors de xarxa del nostre Fortinet.
 
 ```bash
 get system interface
@@ -10,11 +10,11 @@ get system interface
 
 ![Adaptadors de xarxa del Fortinet](img/captura0.jpg)
 
-*Exemple: adaptadors de xarxa configurats al Fortinet.*
+*Exemple dels adaptadors de xarxa configurats al Fortinet.*
 
-### Activar http per poder utilizar els Fortinets de Laboratori
+### Activar HTTP als Fortinets de laboratori
 
-Mirem la configuració actual del port1
+Consultem la configuració actual de `port1`.
 
 ```bash
 config system interface
@@ -24,11 +24,11 @@ show
 
 ![Configuració de xarxa del port1](img/captura1.jpg)
 
-*Exemple: configuració inicial del port1 del adaptador de xarxa configurats al Fortinet.*
+*Exemple de la configuració inicial de `port1` a l'adaptador de xarxa del Fortinet.*
 
-### Activar l'accès http al nostre fortinet de laboratori
+### Activar l'accés HTTP al Fortinet de laboratori
 
-Afegim l'accés del http, mostrem la configuració i guardem els canvis.
+Afegim l'accés HTTP, mostrem la configuració i desem els canvis.
 
 ```bash
 append allowaccess http
@@ -36,11 +36,11 @@ show
 end
 ```
 
-![Afegir l'accès http](img/captura2.jpg)
+![Accés HTTP afegit](img/captura2.jpg)
 
-*Exemple: Afegit l'accès, veure que apareix i guardar els canvis amb la comanda end.*
+*Exemple de l'accés afegit. Comprovem que apareix i desem els canvis amb la comanda `end`.*
 
-### Ara mirem s'accedir des de un navegador a l'ip del port1 per http
+### Accedir al Fortinet des d'un navegador mitjançant HTTP
 
 ```bash
 http://192.168.1.139
@@ -48,41 +48,76 @@ http://192.168.1.139
 
 <img src="img/captura3.jpg" alt="Accés al Fortinet des del navegador" width="600">
 
+Introduïm les credencials d'accés:
+
 ```bash
 admin
 admin
 ```
 
-*Exemple: Accès des de el navegador al nostre fortinet per http*
+*Exemple d'accés al Fortinet mitjançant el navegador i el protocol HTTP.*
 
 ## Primeres configuracions des de l'entorn web
 
-
 ![Primera configuració](img/captura4.jpg)
 
-*Fem "Begin"*
+*Fem clic a «Begin».*
 
-## Configurem el hostname del fortinet.
+## Configurar el nom d'amfitrió del Fortinet
 
+![Configuració del nom d'amfitrió](img/captura5.jpg)
 
-![Configuració hostname](img/captura5.jpg)
+*Escollim el nom i fem clic a «OK».*
 
-*Escullim el nom i fem OK*
+## Triar l'estil del tauler (Dashboard)
 
-## Triem l'estil del Dashboard
+![Selecció de l'estil del tauler](img/captura6.jpg)
 
-![Configuració hostname](img/captura6.jpg)
+*Escollim «Optimal», el nou estil disponible a partir de la versió 6.4.*
 
-*Escullim "Optimal" que es el nou estil des de la versió 6.4*
+## Vídeo introductori de la versió 7
 
-## Vídeo introductori de la nova versió 7
+![Vídeo introductori de la versió 7](img/captura7.jpg)
 
-![Configuració hostname](img/captura7.jpg)
+*Seleccionem «Don't show again» i fem clic a «OK».*
 
-*Escullim "Don't show again" i OK*
+## Accedir a la interfície web del Fortinet
 
-## Accedim a la configuració web del fortinet
+![Interfície web del Fortinet](img/captura8.jpg)
 
-![Configuració hostname](img/captura8.jpg)
+*Exemple d'accés a la interfície web.*
 
-*Exemple: Accès des de l'entorn web*
+## Resum de les comandes treballades
+
+Consultar les interfícies de xarxa:
+
+```bash
+get system interface
+```
+
+Consultar la configuració de `port1` i habilitar-hi l'accés HTTP:
+
+```bash
+config system interface
+edit port1
+show
+append allowaccess http
+show
+end
+```
+
+Treure l'accés HTTP de `port1`:
+
+```bash
+config system interface
+edit port1
+unselect allowaccess http
+show
+end
+```
+
+Accedir a la interfície web del Fortinet (substitueix l'adreça per l'adreça IP de `port1`):
+
+```text
+http://192.168.1.139
+```
