@@ -10,6 +10,12 @@ Consultar les interfícies de xarxa:
 get system interface
 ```
 
+Consultar només les interfícies físiques:
+
+```bash
+get system interface physical
+```
+
 Consultar la configuració de `port1`:
 
 ```bash
