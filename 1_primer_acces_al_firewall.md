@@ -4,16 +4,21 @@ Aquesta guia mostra com consultar les interfícies de xarxa, habilitar l'accés 
 
 ## 1. Consultar les interfícies de xarxa
 
-Executa aquesta comanda per veure les interfícies de xarxa configurades:
+Per consultar totes les interfícies i la configuració definida a FortiGate, executa:
 
 ```bash
 get system interface
 ```
-
-![Adaptadors de xarxa del Fortinet](img/captura0.jpg)
+![Adaptadors de xarxa del Fortinet](img/1/captura0.jpg)
 
 *Exemple dels adaptadors de xarxa configurats al Fortinet.*
 
+Per obtenir únicament informació sobre les interfícies físiques, executa:
+
+```bash
+get system interface physical
+```
+![Adaptadors de xarxa del Fortinet](img/1/captura0.5.jpg)
 ---
 
 ## 2. Habilitar l'accés HTTP a `port1`
@@ -34,11 +39,11 @@ show
 end
 ```
 
-![Configuració de xarxa del port1](img/captura1.jpg)
+![Configuració de xarxa del port1](img/1/captura1.jpg)
 
 *Configuració inicial de `port1`.*
 
-![Accés HTTP afegit](img/captura2.jpg)
+![Accés HTTP afegit](img/1/captura2.jpg)
 
 *L'accés HTTP apareix a la configuració. La comanda `end` desa els canvis i surt del menú.*
 
@@ -64,7 +69,7 @@ Obre l'adreça IP de `port1` en un navegador. Canvia l'adreça de l'exemple si e
 http://192.168.1.139
 ```
 
-![Accés al Fortinet des del navegador](img/captura3.jpg)
+![Accés al Fortinet des del navegador](img/1/captura3.jpg)
 
 *Pàgina d'accés al Fortinet des del navegador.*
 
@@ -81,23 +86,23 @@ Segueix els passos que es mostren a la interfície web:
 
 1. A la pantalla inicial, fes clic a «Begin».
 
-   ![Primera configuració](img/captura4.jpg)
+   ![Primera configuració](img/1/captura4.jpg)
 
 2. Tria el nom d'amfitrió del Fortinet i fes clic a «OK».
 
-   ![Configuració del nom d'amfitrió](img/captura5.jpg)
+   ![Configuració del nom d'amfitrió](img/1/captura5.jpg)
 
 3. Selecciona l'estil «Optimal» per al tauler. Aquest estil està disponible a partir de la versió 6.4.
 
-   ![Selecció de l'estil del tauler](img/captura6.jpg)
+   ![Selecció de l'estil del tauler](img/1/captura6.jpg)
 
 4. Si no vols tornar a veure el vídeo introductori, selecciona «Don't show again» i fes clic a «OK».
 
-   ![Vídeo introductori de la versió 7](img/captura7.jpg)
+   ![Vídeo introductori de la versió 7](img/1/captura7.jpg)
 
 Quan acabis, veuràs la interfície web del Fortinet:
 
-![Interfície web del Fortinet](img/captura8.jpg)
+![Interfície web del Fortinet](img/1/captura8.jpg)
 
 ---
 
