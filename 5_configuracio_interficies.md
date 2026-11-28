@@ -113,3 +113,115 @@ show
 ```
 
 ![Adaptadors de xarxa del Fortinet](img/5/captura39.jpg)
+
+Ara configurem el `port2` amb una adreça ip del nostre primer proveïdor d'Internet.
+
+```bash
+set ip 60.89.123.1/30
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura40.jpg)
+
+*Recorda que `60.89.123.1` és l'adreça ip del teu `port2` del teu Fortinet i `60.89.123.2` és la porta d'enllaç del teu proveïdor d'Internet.*
+
+Ara configurarem el `Alies` del `port2`
+
+```bash
+set alias ISP-1
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura41.jpg)
+
+Ara configurarem el `Role` del `port2` en `WAN`
+
+```bash
+set role wan
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura42.jpg)
+
+*Recorda que la configuració la fem dins els contexte **SITE-B (port2) #** de la configuració del `port2`.*
+
+Finalment guardem els canvis.
+
+```bash
+end
+```
+
+Ara configurem el `port3` amb una adreça ip del nostre segon proveïdor d'Internet.
+
+```bash
+config system interface
+edit port3
+set ip 45.32.12.1/30
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura43.jpg)
+
+*Recorda que `45.32.12.1` és l'adreça ip del teu `port2` del teu Fortinet i `45.32.12.2` és la porta d'enllaç del teu proveïdor d'Internet.*
+
+Ara configurarem el `Alies` del `port3`
+
+```bash
+set alias ISP-2
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura44.jpg)
+
+Ara configurarem el `Role` del `port3` en `WAN`
+
+```bash
+set role wan
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura45.jpg)
+
+*Recorda que la configuració la fem dins els contexte **SITE-B (port3) #** de la configuració del `port3`.*
+
+Finalment guardem els canvis.
+
+```bash
+end
+```
+![Adaptadors de xarxa del Fortinet](img/5/captura46.jpg)
+
+*Aquí veiem el resum de totes les configuracions fetes del `port3` i finalmet fet el `end` per guardar les configuracions fetes.*
+
+A continuació, configurem el `port4` amb una adreça IP de la xarxa interna. Aquesta adreça serà la porta d'enllaç dels equips de la xarxa.
+
+```bash
+config system interface
+edit port3
+set ip 45.32.12.1/30
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura43.jpg)
+
+*Recorda que `45.32.12.1` és l'adreça ip del teu `port2` del teu Fortinet i `45.32.12.2` és la porta d'enllaç del teu proveïdor d'Internet.*
+
+Ara configurarem el `Alies` del `port3`
+
+```bash
+set alias ISP-2
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura44.jpg)
+
+Ara configurarem el `Role` del `port3` en `WAN`
+
+```bash
+set role wan
+```
+
+![Adaptadors de xarxa del Fortinet](img/5/captura45.jpg)
+
+*Recorda que la configuració la fem dins els contexte **SITE-B (port3) #** de la configuració del `port3`.*
+
+Finalment guardem els canvis.
+
+```bash
+end
+```
+![Adaptadors de xarxa del Fortinet](img/5/captura46.jpg)
+
+*Aquí veiem el resum de totes les configuracions fetes del `port3` i finalmet fet el `end` per guardar les configuracions fetes.*
